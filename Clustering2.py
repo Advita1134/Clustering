@@ -11,8 +11,9 @@
 import matplotlib.pyplot as plt
 
 X = [1,3,5.5,10]
+#X = [3,4,1,6,10,5,2]
 #X = [-1,-2,-3,100]
-y = []
+y = [] # Empty list that will hold 0 or 1 depending which group/cluster the number is in.
 
 # Finding the minimum and maximum number of the list.
 min_x = min(X)
@@ -29,7 +30,7 @@ for x in X:
     else:
         y.append(1)
         
-        
+# Creates a plot to show the two different clusters with different colors.        
 plt.scatter(X,[0]*len(X),c=y, cmap = "cool")
 plt.colorbar()
 #plt.grid()
